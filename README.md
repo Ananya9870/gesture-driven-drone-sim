@@ -1,127 +1,118 @@
-Gesture-Driven Drone Simulator
+# Gesture-Driven Drone Simulator 🚁✋
 
-A real-time hand gesture–controlled drone simulator built using MediaPipe, OpenCV, and Python.
-The system uses computer vision to detect hand gestures via a webcam and maps them to drone movements inside a 3D-style simulated environment with HUD and radar visualization.
+Gesture-Driven Drone Simulator is a **computer vision–based interactive simulation** where a virtual drone is controlled entirely using **hand gestures captured via a webcam** — no keyboard, mouse, or controller required.
 
-✨ Features
+The project leverages **MediaPipe Hand Tracking** and **OpenCV** to detect finger positions in real time and translate them into smooth drone movements inside a **3D-style simulated environment with HUD and radar visualization**.
 
-🖐️ Real-time hand gesture recognition using MediaPipe
+---
 
-🚀 Gesture-based drone control
+## 🚀 Features
 
-Rock → Land
+- 🎥 **Real-time webcam-based interaction**
+- ✋ **Hand gesture tracking using MediaPipe**
+- 🧠 **Gesture stabilization** to reduce noise and false positives
+- 🚁 **Gesture-based drone navigation**
+- 🌐 **3D-style perspective grid simulation**
+- 📡 **Live radar widget with sweep animation**
+- 📊 **HUD displaying gesture, drone state, and position**
+- ⚡ **Fully offline & real-time performance**
+- 🎓 **Beginner-friendly yet powerful computer vision logic**
 
-Open Palm → Hover
+---
 
-Scissors → Move Forward
+## 🧑‍✈️ Gesture Controls
 
-Index Finger → Move Backward
+| Gesture | Action |
+|-------|--------|
+| ✊ Rock (Fist) | Land |
+| ✋ Open Palm | Hover |
+| ✌️ Index + Middle | Move Forward |
+| ☝️ Index Only | Move Backward |
+| 🤟 Index + Middle + Ring | Move Left |
 
-Three Fingers → Move Left
+---
 
-🎮 3D-style drone simulation
+## 🛠️ Tech Stack
 
-📡 Live radar widget with sweeping animation
+- **Python 3**
+- **OpenCV**
+- **MediaPipe**
+- **NumPy**
 
-🧠 Gesture smoothing to reduce noise and false detection
+---
 
-📊 On-screen HUD displaying gesture, drone state, and position
+## 📂 Project Structure
 
-⚡ Runs fully offline using a webcam
+```bash
+gesture-driven-drone-simulator/
+│
+├── main.py                # Main application script
+├── README.md              # Project documentation
+└── requirements.txt       # Python dependencies
 
-🛠️ Tech Stack
-
-Python 3
-
-OpenCV
-
-MediaPipe
-
-NumPy
-
-📂 Project Structure
-.
-├── main.py          # Main application file
-├── README.md        # Project documentation
-
-▶️ How It Works
-
-Webcam captures live video feed.
-
-MediaPipe detects hand landmarks.
-
-Finger states are analyzed to classify gestures.
-
-Gestures are stabilized using a frame history buffer.
-
-Drone position is updated based on recognized gestures.
-
-A simulated 3D environment renders:
-
-Drone body & rotors
-
-Perspective grid
-
-Radar visualization
-
-HUD text
-
-🧑‍✈️ Gesture Controls
-Gesture	Action
-✊ Rock (Fist)	Land
-✋ Open Palm	Hover
-✌️ Index + Middle	Move Forward
-☝️ Index Only	Move Backward
-🤟 Index + Middle + Ring	Move Left
-⚙️ Installation & Setup
+⚙️ Installation
 1️⃣ Clone the Repository
 git clone https://github.com/your-username/gesture-driven-drone-simulator.git
 cd gesture-driven-drone-simulator
 
 2️⃣ Install Dependencies
+pip install -r requirements.txt
+
+
+If you don’t have requirements.txt, install manually:
+
 pip install opencv-python mediapipe numpy
 
-3️⃣ Run the Project
+▶️ Run the Simulator
 python main.py
 
 
-📷 Ensure your webcam is connected and accessible
+📷 Make sure your webcam is connected
+❌ Press q to quit the application
 
-🖥️ Controls
+🧠 How It Works
 
-Show gestures in front of the webcam
+Captures live webcam frames using OpenCV
 
-Press q to quit the application
+Detects hand landmarks with MediaPipe Hands
 
-📸 Demo Preview
+Analyzes finger positions to classify gestures
 
-(Optional: Add screenshots or a GIF here for better presentation)
+Smooths gestures using a frame-history buffer
+
+Updates drone movement with world constraints
+
+Renders a simulated 3D environment with:
+
+Perspective grid
+
+Drone body and rotors
+
+Radar visualization
+
+Heads-Up Display (HUD)
 
 🚀 Use Cases
 
-Computer Vision & AI demos
+Computer Vision & AI demonstrations
 
-Gesture-based HCI systems
+Gesture-based Human–Computer Interaction (HCI)
 
-UAV/drone control research prototypes
+UAV & drone navigation prototypes
 
-Hackathons & academic projects
+Hackathons and academic projects
 
-Assistive and touchless control interfaces
+Touchless control systems
 
-📌 Future Improvements
+🧪 Tested On
 
-Add right & upward movement gestures
+Windows 10 / 11
 
-Integrate real drone (ROS / PX4 / DJI SDK)
+Python 3.9+
 
-Improve depth perception
-
-Multi-hand gesture support
-
-VR/AR visualization
+Laptop webcam
 
 🤝 Contributing
 
-Contributions, ideas, and improvements are welcome!
-Feel free to fork this repo and submit a pull request.
+Contributions, issues, and feature requests are welcome!
+Feel free to fork this repository and submit a pull request.
